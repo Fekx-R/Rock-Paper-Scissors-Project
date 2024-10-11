@@ -31,12 +31,12 @@ const playRound = (humanInput, computerInput) => {
 
     if (winningCondition[humanInput] === computerInput) {
         humanScore++;
-        console.log(`Player wins! ${humanInput} beats ${computerInput}`);
+        console.log(`Player wins! ${humanInput} beats ${computerInput} \nYour score: ${humanScore} Computer Score: ${computerScore}`);
     } else if (humanChoice === computerChoice) {
-        console.log(`It's a tie! Both chose ${humanInput}`);
+        console.log(`It's a tie! Both chose ${humanInput} \nYour score: ${humanScore} Computer Score: ${computerScore}`);
     } else {
         computerScore++;
-        console.log(`Computer wins! ${computerInput} beats ${humanInput}`);
+        console.log(`Computer wins! ${computerInput} beats ${humanInput} \nYour score: ${humanScore} Computer Score: ${computerScore}`);
     }
 }
 
@@ -53,8 +53,8 @@ const playGame = () => {
         playGame()
     }
 
-    console.log(`Your score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
+    // console.log(`Your score: ${humanScore}`);
+    // console.log(`Computer Score: ${computerScore}`);
     
     
 }

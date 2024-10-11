@@ -9,5 +9,11 @@ const getHumanChoice = () => {
     return HumanChoice
 }
 
-let playerScore = 0;
+let humanScore = 0;
 let computerScore = 0;
+
+
+const playRound = (humanChoice, computerChoice) => {
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
+}

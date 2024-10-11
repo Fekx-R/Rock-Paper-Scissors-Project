@@ -1,19 +1,7 @@
-humanScore = 0;
-computerScore = 0;
-
-const getComputerChoice = (max) => {
-    return Math.floor(Math.random() * max);
+const getComputerChoice = () => {
+    const options = ["rock", "paper", "scissors"];
+    const randomIndexFromOptions = Math.floor(Math.random() * options.length);
+    return options[randomIndexFromOptions];
 }
-console.log(getComputerChoice(2));
 
-
-const getHumanChoice = () => {
-    return prompt(`Choose: Rock, Paper, Scissor`, "Paper");
-}
-console.log(getHumanChoice());
-
-const playRound = (humanChoice, computerChoice) => {
-    humanChoice = //i
-    console.log();
-    
-}
+console.log(getComputerChoice());

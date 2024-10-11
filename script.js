@@ -4,4 +4,10 @@ const getComputerChoice = () => {
     return options[randomIndexFromOptions];
 }
 
-console.log(getComputerChoice());
+const getHumanChoice = () => {
+    let HumanChoice = prompt("Choose Rock, Paper or Scissors :", "Rock").toLowerCase();
+    return HumanChoice
+}
+
+let playerScore = 0;
+let computerScore = 0;

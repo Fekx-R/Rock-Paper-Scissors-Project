@@ -19,6 +19,16 @@ const getHumanChoice = () => {
 let humanScore = 0;
 let computerScore = 0;
 
+const resetGame = () => {
+    const resetOrNo = confirm("Do you want to restart the game?")
+    if (resetOrNo) {
+        humanScore = 0;
+        computerScore = 0;
+        playGame();
+    } else {
+        return false;
+    }
+}
 
 const playRound = (humanInput, computerInput) => {
     const winningCondition = {
@@ -47,11 +57,12 @@ const playGame = () => {
     playRound(humanChoice, computerChoice)
 
     if (humanScore === 3) {
-        alert(`You win the game ${humanScore} - ${computerScore}`)
+        alert(`You win the game ${humanScore} - ${computerScore}`);
         console.log("Congratulation!");
-        
+        resetGame()
     } else if (computerScore === 3) {
-        alert(`Computer win the game ${computerScore} - ${humanScore}`)
+        alert(`Computer win the game ${computerScore} - ${humanScore}`);
+        resetGame()
     } else {
         playGame()
     }

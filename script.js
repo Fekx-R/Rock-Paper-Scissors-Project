@@ -5,15 +5,58 @@ const getComputerChoice = () => {
 }
 
 const getHumanChoice = () => {
-    let HumanChoice = prompt("Choose Rock, Paper or Scissors :", "Rock").toLowerCase();
-    return HumanChoice
+    const humanChoice = prompt("Choose Rock, Paper or Scissors :", "Rock").toLowerCase();
+    if (humanChoice === 'rock' || humanChoice === "paper" || humanChoice === "scissors") {
+        return humanChoice;
+    } else {
+        alert("Incorrect Value! Choose Rock, Paper or Scissors value")
+        return getHumanChoice()
+    }
+
 }
+
 
 let humanScore = 0;
 let computerScore = 0;
 
 
-const playRound = (humanChoice, computerChoice) => {
+const playRound = (humanInput, computerInput) => {
+    
+
+    const winningCondition = {
+        rock: 'scissors',
+        paper: 'rock',
+        scissors: 'paper'
+    }
+
+    if (winningCondition[humanInput] === computerInput) {
+        humanScore++;
+        console.log(`Player wins! ${humanInput} beats ${computerInput}`);
+    } else if (humanChoice === computerChoice) {
+        console.log(`It's a tie! Both chose ${humanInput}`);
+    } else {
+        computerScore++;
+        console.log(`Computer wins! ${computerInput} beats ${humanInput}`);
+    }
+}
+
+const playGame = () => {
     computerChoice = getComputerChoice();
     humanChoice = getHumanChoice();
+    playRound(humanChoice, computerChoice)
+
+    if (humanScore === 3) {
+        alert(`You win the game ${humanScore} - ${computerScore}`)
+    } else if (computerScore === 3) {
+        alert(`Computer win the game ${computerScore} - ${humanScore}`)
+    } else {
+        playGame()
+    }
+
+    console.log(`Your score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+    
+    
 }
+
+playGame()

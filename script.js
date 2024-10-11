@@ -21,8 +21,6 @@ let computerScore = 0;
 
 
 const playRound = (humanInput, computerInput) => {
-    
-
     const winningCondition = {
         rock: 'scissors',
         paper: 'rock',
@@ -31,12 +29,15 @@ const playRound = (humanInput, computerInput) => {
 
     if (winningCondition[humanInput] === computerInput) {
         humanScore++;
-        console.log(`Player wins! ${humanInput} beats ${computerInput} \nYour score: ${humanScore} Computer Score: ${computerScore}`);
+        alert(`Player wins! ${humanInput} beats ${computerInput} 
+            \nYour score: ${humanScore} \nComputer Score: ${computerScore}`);
     } else if (humanChoice === computerChoice) {
-        console.log(`It's a tie! Both chose ${humanInput} \nYour score: ${humanScore} Computer Score: ${computerScore}`);
+        alert(`It's a tie! Both chose ${humanInput} 
+            \nYour score: ${humanScore} \nComputer Score: ${computerScore}`);
     } else {
         computerScore++;
-        console.log(`Computer wins! ${computerInput} beats ${humanInput} \nYour score: ${humanScore} Computer Score: ${computerScore}`);
+        alert(`Computer wins! ${computerInput} beats ${humanInput} 
+            \nYour score: ${humanScore} \nComputer Score: ${computerScore}`);
     }
 }
 
@@ -47,6 +48,8 @@ const playGame = () => {
 
     if (humanScore === 3) {
         alert(`You win the game ${humanScore} - ${computerScore}`)
+        console.log("Congratulation!");
+        
     } else if (computerScore === 3) {
         alert(`Computer win the game ${computerScore} - ${humanScore}`)
     } else {

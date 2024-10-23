@@ -58,10 +58,11 @@ const playGame = () => {
 
     if (humanScore === 3) {
         alert(`You win the game ${humanScore} - ${computerScore}`);
-        console.log("Congratulation!");
+        alert("Congratulation!");
         resetGame()
     } else if (computerScore === 3) {
         alert(`Computer win the game ${computerScore} - ${humanScore}`);
+        alert("Nice Try dude!");
         resetGame()
     } else {
         playGame()

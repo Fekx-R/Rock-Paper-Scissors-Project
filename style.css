@@ -1,0 +1,101 @@
+:root {
+    --font-color: rgb(255, 209, 149);
+    --second-font-color: #bc9f69;
+    --background-color: linear-gradient(90deg, rgb(64, 64, 255), rgb(255, 65, 65));
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    /* background: linear-gradient(90deg, rgb(36, 38, 37), rgb(66, 60, 51)); */
+    background: rgb(36, 38, 37);
+}
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    font-size: 2.5rem;
+    color: var(--second-font-color);
+    /* border: 1px solid black; */
+}
+
+
+.start-game {
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+}
+.start-game button , .reset-game button{
+    padding: 7px 15px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    background: var(--background-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    width: 850px;
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--second-font-color);
+}
+
+#display-game{
+    display: none;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--second-font-color);
+}
+.human-options {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin: 25px auto;
+    gap: 40px;
+}
+.human-options button {
+    border-radius: 50px;
+    border: 1px solid var(--second-font-color);
+    width: 100px;
+    height: 35px;
+    font-weight: 600;
+    color: var(--font-color);
+    background: var(--background-color);
+    cursor: pointer;
+}
+
+.result {
+    display: none;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 17px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--second-font-color);
+}
+#win-result {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--second-font-color);
+}
+.reset-game {
+    display: none;
+    justify-content: center;
+}

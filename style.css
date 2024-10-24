@@ -40,7 +40,7 @@ body{
 }
 
 .score {
-    display: flex;
+    display: none;
     justify-content: space-around;
     width: 850px;
     margin: 0 auto 30px;
@@ -79,7 +79,7 @@ h3 {
 }
 
 .result {
-    display: none;
+    display: flex;
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 17px;
@@ -97,5 +97,7 @@ h3 {
 }
 .reset-game {
     display: none;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
